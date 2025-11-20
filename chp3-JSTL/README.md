@@ -1,65 +1,65 @@
 
 # JSTL tags
 
-- <c:foreach>
+- `<c:foreach>`
 	- Attributes:
-		-  items: collection of items to loop over
-		-  var: variable used for the loop
-		-  begin: begin at value specified
-		-  end: end at value specified
-		-  step: increment/decrement
+		-  `items`: collection of items to loop over
+		-  `var`: variable used for the loop
+		-  `begin`: begin at value specified
+		-  `end`: end at value specified
+		-  `step`: increment/decrement
 
-- <c:out>
-	- Like <%= %> but for expressions
+- `<c:out>`
+	- Like `<%= %>` but for expressions
 	- Attributes:
-		-  value: expression to be evaluated
-		-  default: evaluated if value is null
+		-  `value`: expression to be evaluated
+		-  `default`: evaluated if value is null
 
-- <c:set>
+- `<c:set>`
 	- Sets result of expression evaluation
 	- Attributes:
-		- var: variable for the value being set
-		- value: evaluated value to be set
+		- `var`: variable for the value being set
+		- `value`: evaluated value to be set
 
-- <c:url>
+- `<c:url>`
 	- Creates url with optional parameters
 	- Attributes:
-		- var: variable for the url
-		- value: url to be processed
+		- `var`: variable for the url
+		- `value`: url to be processed
 
-- <c:param>
+- `<c:param>`
 	-  Adds parameter to url
 	-  Attributes:
-		- name: name of parameter
-		- value: value of parameter
+		- `name`: name of parameter
+		- `value`: value of parameter
 
-- <c:if>
+- `<c:if>`
 	- Conditional tag, evaluates body if test condition is true
 	- Attributes;
-		- test: boolean expression to be tested
-		- var: export boolean value of the test condition
+		- `test`: boolean expression to be tested
+		- `var`: export boolean value of the test condition
 
-- <c:choose>
+- `<c:choose>`
 	- Tag that contains mutually exclusive conditional operations, like if/else
-	- if - <c:when>
-	- else: <c:otherwise>
+	- if - `<c:when>`
+	- else: `<c:otherwise>`
 
-- <c:when>
-	- Subtag of <c:choose>, executes body if test condition is true
+- `<c:when>`
+	- Subtag of `<c:choose>`, executes body if test condition is true
 	- Attributes:
-		- test: boolean expression to be tested
+		- `test`: boolean expression to be tested
 
-- <c:otherwise>
-	- Follows <c:when> tags and executes body when all other conditions are false
+- `<c:otherwise>`
+	- Follows `<c:when>` tags and executes body when all other conditions are false
 
-- pageScope.name
-	- Comes from pageContext.setAttribute(name, value)
+- `pageScope.name`
+	- Comes from `pageContext.setAttribute(name, value);`
 	- only lasts for a specific JSP page
 
-- requestScope.name
-	- Comes from request.setAttribute(name, value); request.getRequestDispatcher(jsp).forward(req, resp);
+- `requestScope.name`
+	- Comes from `request.setAttribute(name, value); request.getRequestDispatcher(jsp).forward(req, resp);`
 	- Available for a single HTTP request
 
-- sessionScope.name
-	- Comes from session.setAttribute(name, value)
+- `sessionScope.name`
+	- Comes from `session.setAttribute(name, value);`
 	- Stored in users session, available until session expires
