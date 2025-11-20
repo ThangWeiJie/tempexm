@@ -11,14 +11,14 @@
 
 - Java class that handles HTTP requests and forwards to model or view
 - Lifecycle
-	- init(): Initializes the servlet
-	- service(): Routes the request to doGet() or doPost()
-	- doGet(): Processes GET requests
-	- doPost(): Processes POST requests
-	- destroy(): Destroys and cleans up the servlet
+	- `init()`: Initializes the servlet
+	- `service()`: Routes the request to doGet() or doPost()
+	- `doGet()`: Processes GET requests
+	- `doPost()`: Processes POST requests
+	- `destroy()`: Destroys and cleans up the servlet
 
 - Forward requests from controller to view:
-	- request.getRequestDispatcher("example.jsp").forward(request, response);
+	- `request.getRequestDispatcher("example.jsp").forward(request, response);`
 
 
 # POJO as Model
@@ -33,38 +33,38 @@
 - set and get methods
 
 - Using JavaBeans
-	- <jsp:useBean id="bean name" scope = "bean scope" class = "bean class name"/>: Declare a bean
-	- <jsp:setProperty name="bean name" property="property name" value="value/>
-	- <jsp:getProperty name="bean name" property="property name"/>
+	- `<jsp:useBean id="bean name" scope = "bean scope" class = "bean class name"/>`: Declare a bean
+	- `<jsp:setProperty name="bean name" property="property name" value="value/>`
+	- `<jsp:getProperty name="bean name" property="property name"/>`
 
 
 # JSP for View
 
 - Can include java code for dynamic rendering
 - Scripting Elements
-	- Scriptlet tag <% %>: used to write java code in JSP
-	- Expression tag <%= %>: evaluates body and displays it 
-	- Declaration tag <%! %>: used to declare variables/methods
-	- JSP Comment tag: <%-- --%>; HTML Comment Tag: \<!-- -->
+	- Scriptlet tag `<% %>`: used to write java code in JSP
+	- Expression tag `<%= %>`: evaluates body and displays it 
+	- Declaration tag `<%! %>`: used to declare variables/methods
+	- JSP Comment tag: `<%-- --%>`; HTML Comment Tag: `<!-- -->`
 - Directive Elements
-	- Page directive: \<%@ page attribute= "value"%>; Can be used to import classes/library into the JSP file
-	- Include directive: \<%@ page include="filename" %> Used to include other pages directly into the page
-	- Taglib directive: \<%@ taglib uri="uri" prefix="prefix" %>
+	- Page directive: `<%@ page attribute= "value"%>` Can be used to import classes/library into the JSP file
+	- Include directive: `<%@ page include="filename" %>` Used to include other pages directly into the page
+	- Taglib directive: `<%@ taglib uri="uri" prefix="prefix" %>`
 		- Used to import JSTL
 - Implicit objects:
-	- out: JSPWriter
-	- request: HTTPServletRequest
-	- response: HTTPServletResponse
-	- config: ServletConfig
-	- application: ServletContext
-	- session: HTTPSession
-	- pageContext: PageContext
-	- page: Object
-	- exception: Throwable
+	- `out`: JSPWriter
+	- `request`: HTTPServletRequest
+	- `response`: HTTPServletResponse
+	- `config`: ServletConfig
+	- `application`: ServletContext
+	- `session`: HTTPSession
+	- `pageContext`: PageContext
+	- `page`: Object
+	- `exception`: Throwable
 - Action elements:
-	- <jsp:include page="URL"/>: Include static or dynamic resources at request time
-	- <jsp:forward page="URL"/>
-	- <jsp:useBean id="name" path="fully_qualified_pathname" scope = "{page | request | session | application}" />
+	- `<jsp:include page="URL"/>`: Include static or dynamic resources at request time
+	- `<jsp:forward page="URL"/>`
+	- `<jsp:useBean id="name" path="fully_qualified_pathname" scope = "{page | request | session | application}" />`
 
 
 
